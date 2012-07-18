@@ -11,12 +11,16 @@ def copier(dir="."):
     print "time for orgy....."
     dirlist=os.listdir(dir)
     for d in dirlist:
-        if(re.search(r'mp3',d)):
+        if(re.search(r'(?:\.mp3$)|(?:\.wav$)|(?:\.flac$)',d,re.I)):
             print d+" found";
             if not (os.path.isdir("music")):
                     os.mkdir("music");
             shutil.move(d,os.path.curdir+'/'+'music'+'/'+d);
-
+        elif(re.search(r'(?:\.flv$)|(?:\.mp4$)|(?:\.avi$)|(?:\.mkv$)',d,re.I)):
+            print d+ " found";
+            if not (os.path.isdir("videos")):
+                os.mkdir("videos");
+            shutil.move(d,os.path.curdir+'/'+'videos'+'/'+d);
 
     print "organised";
 

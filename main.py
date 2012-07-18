@@ -4,12 +4,21 @@ Author:Nithin Saji
 Name:Py-Orgy
 License:CC
 """
+import re;
+import shutil;
+import os;
 def copier(dir="."):
-    import os;
     print "time for orgy....."
     dirlist=os.listdir(dir)
     for d in dirlist:
-           print os.path.curdir+d
+        if(re.search(r'\.mp3$',d)):
+            if not (os.path.isdir("music")):
+                    os.mkdir("music");
+            if(shutil.copy2(d,os.path.curdir+"/"+"music/"+d)):
+                print d+" copied to music";
+
+
+    print "organised";
         
 
 

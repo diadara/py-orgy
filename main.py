@@ -4,6 +4,16 @@ Author:Nithin Saji
 Name:Py-Orgy
 License:CC
 """
-import os
-print "time to clean.....";
+def copier(dir="."):
+    import os;
+    print "time for orgy....."
+    dirlist=os.listdir(dir)
+    for d in dirlist:
+           print os.path.curdir+d
+        
 
+
+def main():
+    copier();
+if __name__=="__main__":
+    main();

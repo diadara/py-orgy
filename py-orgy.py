@@ -16,7 +16,7 @@ def copier(dir="."):
             print d+" found";
             if not (os.path.isdir("music")):
                     os.mkdir("music");
-            shutil.move(dir+'/'+'music'+'/'+d);
+            shutil.move(d,dir+'/'+'music'+'/'+d);
         elif(re.search(r'(?:\.flv$)|(?:\.mp4$)|(?:\.avi$)|(?:\.mkv$)|(?:\.webm$)',d,re.I)):
             print d+ " found";
             if not (os.path.isdir("videos")):

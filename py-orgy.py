@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 """This is a simple script to organize files within your download folder
 Author:Nithin Saji
 Name:Py-Orgy

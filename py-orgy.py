@@ -5,7 +5,7 @@ Name:Py-Orgy
 License:CC
 """
 import re;
-import shutil;
+import shutil;#for copying files
 import sys;
 import os;
 def copier(dir="."):
